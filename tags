@@ -10,6 +10,7 @@ byte	level8/source.c	/^typedef	unsigned char	byte;	\/* 8-bit data *\/$/;"	t	file
 false	level8/source.c	7;"	d	file:
 m	level6/source.c	/^void m(void *param_1,int param_2,char *param_3,int param_4,int param_5)$/;"	f
 m	level7/source.c	/^void m(void *param_1,int param_2,char *param_3,int param_4,int param_5)$/;"	f
+main	bonus0/source.c	/^int main(void)$/;"	f
 main	level0/source.c	/^int main(int argc,char **argv)$/;"	f
 main	level1/source.c	/^int main(void)$/;"	f
 main	level2/source.c	/^void main(void)$/;"	f
@@ -25,8 +26,10 @@ n	level4/source.c	/^void n(void)$/;"	f
 n	level5/source.c	/^void n(void)$/;"	f
 n	level6/source.c	/^void n(void)$/;"	f
 o	level5/source.c	/^void o(void)$/;"	f
+p	bonus0/source.c	/^void p(char *param_1,char *param_2)$/;"	f
 p	level2/source.c	/^void p(void)$/;"	f
 p	level4/source.c	/^void p(char *param_1)$/;"	f
+pp	bonus0/source.c	/^void pp(char *str)$/;"	f
 setAnnotation	level9/source.c	/^void __thiscall setAnnotation(N *this,char *param_1)$/;"	f
 true	level8/source.c	6;"	d	file:
 v	level3/source.c	/^void v(void)$/;"	f
