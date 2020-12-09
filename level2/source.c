@@ -1,6 +1,5 @@
 
 void p(void)
-
 {
   uint local_res0;
   char str [76];
@@ -18,7 +17,6 @@ void p(void)
 }
 
 void main(void)
-
 {
   p();
   return;

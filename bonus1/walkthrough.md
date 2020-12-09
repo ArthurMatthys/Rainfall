@@ -1,7 +1,7 @@
 Here, we cannot give a number greater than 9 as first argument, else we won't be able to try to overflow the `memcpy`.
-Since the number given is multiplied by 4, we can try to overflow the first argument. Indeed, since memcpy's third argument is a `size_t`, on a 32bits system, the `size_t` type is only on 4 bytes.
+Since the number given is multiplied by 4, we can try to overflow the first argument. Indeed, since memcpy's third argument is a `size_t`, on a 32bits system, the `size_t` type is only 4 bytes long.
 
-So, since uint32 max value = 4294967295, if we want to overflow, we need a this base value :
+So, since uint32 max value = 4294967295, if we want to overflow, we need a base value :
 
 ```mathematica
 (4294967295 + 1) / 4 = 1073741824

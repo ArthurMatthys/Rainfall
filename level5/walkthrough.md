@@ -1,4 +1,4 @@
-The difference, here, is that there is a backdoor. So we just need to make execute put the address of the function `o` (0x080484a4) where the stack will read.
+The difference, here, is that there is a backdoor. So we just need to put the address of the function `o` (0x080484a4) where the stack will read.
 So, we could put it in the call of `exit`. In the function `exit`, we have this line :
 
 >   0x080483d0 <+0>:	jmp    *0x8049838
@@ -7,7 +7,7 @@ And we got :
 
 >(gdb) disas 0x8049838
 >Dump of assembler code for function exit@got.plt:
->0x08049838 <+0>:	(bad)  
+>0x08049838 <+0>:	(bad)
 >0x08049839 <+1>:	addl   $0xffffffe6,(%eax,%ecx,1)
 
 So we can put the address of `o` right there : `0x08049838`

@@ -1,5 +1,4 @@
 void n(void)
-
 {
   char local_20c [520];
   
@@ -19,7 +18,6 @@ void o(void)
 
 
 void main(void)
-
 {
   n();
   return;

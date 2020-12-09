@@ -16,7 +16,7 @@ With a ltrace with, we got :
 There is a segfault because we try to copy the second argument in a strange address.
 The `strange address` correspond to the bytes 21-24 of the first argument.
 
-So, if we do the same thing as previously, and put inside a function that will be call later (`puts` for example) the address of `m`. it will call `m` for us.
+So, if we do the same thing as previously, and put inside a function that will be called later (`puts` for example) the address of `m`. it will call `m` for us.
 So we gather the address of `m` with gdb :
 
 ```assembly

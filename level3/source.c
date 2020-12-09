@@ -1,6 +1,5 @@
 
 void v(void)
-
 {
   char local_20c [520];
 
@@ -14,7 +13,6 @@ void v(void)
 }
 
 void main(void)
-
 {
   v();
   return;

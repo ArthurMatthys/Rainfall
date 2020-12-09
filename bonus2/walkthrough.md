@@ -1,4 +1,4 @@
-This program has a different behaviour depending on the `LANG` environment variable. There is three state :
+This program has a different behaviour depending on the `LANG` environment variable. There are three possible states :
 
 ```bash
 LANG="fi"
@@ -13,7 +13,7 @@ bonus2@RainFall:~$ export LANG="fi"
 ```
 
 And tried to segfault the program with a buffer overflow.
-First we see that the `strncpy` copy up to 40 bytes in a 10 bytes buffer. And we put a lot of bytes into the second argument :
+First we see that the `strncpy` copies up to 40 bytes in a 10 bytes buffer. And we put a lot of bytes into the second argument :
 
 >bonus2@RainFall:~$ gdb -q --args ./bonus2 `python -c 'print("A" * 40)'` `python -c 'print("AAAABBBBCCCCDDDDEEEEFFFFGGGGHHHH")'`
 >Reading symbols from /home/user/bonus2/bonus2...(no debugging symbols found)...done.

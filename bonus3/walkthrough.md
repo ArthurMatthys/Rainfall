@@ -1,4 +1,4 @@
-We see here that to have a shell, we just need that the strcmp between the content of the .pass and our first argument are the same.
+We see here, that in order to have a shell, we just need the strcmp between the content of the .pass and our first argument to be equal.
 There is just one tweak that has been done to the content of `/home/user/end/.pass` :
 
 ```c

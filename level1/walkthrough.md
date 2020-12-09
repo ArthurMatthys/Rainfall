@@ -1,4 +1,4 @@
-With gdb, with can try to verify the length of the buffer.
+With gdb, we can try to verify the length of the buffer.
 To do so, we run `gbd ./level01` and we write 76 characters. 
 
 > (gdb) run
@@ -17,7 +17,7 @@ Secondly, we must not close the prompt, so a simple execution of a python script
 cat <(cmd) - | ./level1
 ```
 
-There is two ways to exploit a buffer overflow. Either by using a shell-code and rewrite the eip address. Or we can change the stack directly so it will do what we want.
+There are two ways to exploit a buffer overflow. Either by using a shell-code and rewrite the eip address. Or we can change the stack directly so it will do what we want.
 We will go with the second option.
 To do so, we need to find the location of the function `system` and find the string `/bin/sh` with gdb :
 
